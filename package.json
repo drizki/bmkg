@@ -1,0 +1,15 @@
+{
+  "name": "bmkg",
+  "version": "1.0.0",
+  "description": "Get realtime weather forecast and recent earthquake data from BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)",
+  "main": "src/bmkg.js",
+  "repository": "https://github.com/drizki/bmkg",
+  "author": "Dwi Rizki Irawan",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "xml-js": "^1.6.11"
+  }
+}

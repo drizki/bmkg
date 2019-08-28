@@ -4,10 +4,12 @@
   "description": "Get realtime weather forecast and recent earthquake data from BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)",
   "main": "src/bmkg.js",
   "scripts": {
-    "test:cov": "istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec",
-    "test": "nyc mocha || true"
+    "test": "mocha || true",
+    "cover": "npm run cover:unit && npm run cover:report",
+    "cover:unit": "nyc --silent npm test",
+    "cover:report": "nyc report --reporter=lcov --reporter=text"
   },
-  "repository": "https://github.com/drizki/bmkg",
+  "repository": "https://github.comgit sta/drizki/bmkg",
   "author": "Dwi Rizki Irawan",
   "license": "MIT",
   "private": false,

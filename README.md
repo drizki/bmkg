@@ -12,9 +12,11 @@ This module is a wrapper around BMKG (Badan Meteorologi, Klimatologi, dan Geofis
 
 BMKG offers data to the public using their open data initiative. Problem is, it only serves XML as the data output, no support for JSON or any other types.
 
-## Usage
+#### Usage
 
-### Installation
+Check out [examples](https://github.com/drizki/bmkg/tree/master/examples) folder on how to use (it's super simple)
+
+#### Installation
 
 The package is available at NPM repository.
 
@@ -24,11 +26,16 @@ npm install bmkg
 yarn add bmkg
 ```
 
-Check out [examples](https://github.com/drizki/bmkg/tree/master/examples) folder on how to use (it's super simple)
+#### Test
+
+Clone the repository and run the following command:
+
+```bash
+npm test
+```
 
 ## Roadmap
 
-- Test
 - Browser version
 
 #### Limitations

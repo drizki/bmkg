@@ -1,6 +1,7 @@
 # bmkg.js
 
 [![Build Status](https://travis-ci.org/drizki/bmkg.svg?branch=master)](https://travis-ci.org/drizki/bmkg)
+[![codecov](https://codecov.io/gh/drizki/bmkg/branch/master/graph/badge.svg)](https://codecov.io/gh/drizki/bmkg)
 [![Latest Stable Version](https://img.shields.io/npm/v/bmkg.svg)](https://www.npmjs.com/package/bmkg)
 [![License](https://img.shields.io/npm/l/bmkg.svg)](https://www.npmjs.com/package/bmkg)
 [![NPM Downloads](https://img.shields.io/npm/dt/bmkg.svg)](https://www.npmjs.com/package/bmkg)

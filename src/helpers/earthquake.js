@@ -8,6 +8,8 @@ const helper = {
    * @returns Object
    */
   convertToObject: xml => {
+    if (xml == null || xml == undefined) throw new Error();
+    if (typeof xml !== "string") throw new Error();
     return JSON.parse(convert.xml2json(xml, { compact: true, spaces: 2 }));
   },
 
@@ -17,10 +19,25 @@ const helper = {
    * @param Boolean potentialTsunami - if data includes potential tsunami
    * @param Boolean felt - is felt format response
    * @param Boolean area - show area
+   * @param Boolean hasNoCoords - get coordinate from Lintang and Bujur instead of point.coordinates
    * @param Boolean hasLink - show if has link
    * @returns Object
    */
   formatResponse: (obj, potentialTsunami, felt, area, hasNoCoords, hasLink) => {
+    if (!obj) throw new Error();
+    if (typeof obj !== "object")
+      throw new Error("Expected Object type of parameter potentialTsunami");
+    if (typeof potentialTsunami !== "boolean")
+      throw new Error("Expected Boolean type of parameter potentialTsunami");
+    if (typeof felt !== "boolean")
+      throw new Error("Expected Boolean type of parameter felt");
+    if (typeof area !== "boolean")
+      throw new Error("Expected Boolean type of parameter area");
+    if (typeof hasNoCoords !== "boolean")
+      throw new Error("Expected Boolean type of parameter hasNoCoords");
+    if (typeof hasLink !== "boolean")
+      throw new Error("Expected Boolean type of parameter hasLink");
+
     let response = {
       depth: parseFloat(obj.Kedalaman._text.split(" ")[0]),
       magnitude: parseFloat(obj.Magnitude._text.split(" ")[0])

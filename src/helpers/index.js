@@ -1,6 +1,6 @@
-const bmkg = {
+const helpers = {
   weather: require("./weather"),
   earthquake: require("./earthquake")
 };
 
-module.exports = bmkg;
+module.exports = helpers;

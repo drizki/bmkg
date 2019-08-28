@@ -36,4 +36,7 @@ const lastWithPotentialTsunami = async () => {
   }
 };
 
+latest();
+last60();
+last20();
 lastWithPotentialTsunami();

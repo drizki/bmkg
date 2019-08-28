@@ -9,6 +9,46 @@ const helper = {
      * @returns String url
      */
     getWeatherLink: provinceID => {
+      let provinceCodes = [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        51,
+        52,
+        53,
+        61,
+        62,
+        63,
+        64,
+        65,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        81,
+        82,
+        91,
+        94
+      ];
+      if (provinceID === null || provinceID === undefined) throw new Error();
+      if (typeof provinceID !== "number") throw new Error();
+      if (provinceCodes.indexOf(provinceID) < 0) throw new Error();
+
       let baseURL =
         "http://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-";
       let url;
@@ -115,10 +155,21 @@ const helper = {
         case 94:
           url = baseURL + "Papua" + ".xml";
           break;
+        default:
+          url = baseURL + "DKIJakarta" + ".xml";
+          break;
       }
       return url;
     },
+    /**
+     * Get weather issue timestamp
+     * @param Object issue object
+     * @returns Number unix timestamp
+     */
     getIssueTimestamp: issue => {
+      if (issue === null || issue === undefined) throw new Error();
+      if (typeof issue !== "object") throw new Error();
+
       let date =
         issue.year._text +
         "-" +

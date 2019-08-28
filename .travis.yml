@@ -6,6 +6,8 @@ cache:
     - node_modules
 install:
   - npm install -g codecov
+env:
+  - CODECOV_TOKEN="66f1400f-4707-4836-a9e1-427d744b9c5d"
 before_script:
   - npm install
 script:
